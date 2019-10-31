@@ -19,3 +19,4 @@ console.log('Hello World from Webpacker')
 
 // app/javascript/packs/application.js
 import 'bootstrap';
+

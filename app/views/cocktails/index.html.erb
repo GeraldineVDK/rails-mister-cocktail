@@ -1,0 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1286&q=80);">
+  <h1>Cozy Cocktails</h1>
+  <h3>“Alcohol may be man’s worst enemy, but the bible says love your enemy.”</h3>
+  <cite> — Frank Sinatra</cite>
+</div>
+
+
+<div class="container">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-product">
+    <img src="https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2019.2F01.2F28.2Fe187c58e-768f-4eb3-b611-9f13a2ce073c.2Ejpeg/748x372/quality/80/crop-from/center/bloody-mary.jpeg" />
+      <div class="card-product-infos">
+        <h2><%= cocktail.name %></h2>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Add a New Cocktail", new_cocktail_path %>
+
