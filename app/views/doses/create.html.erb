@@ -1,9 +1,11 @@
 <div  class="container">
-  <h1>Create a New Dose</h1>
-  <div class="container-form">
-    <%= simple_form_for [@dose] do |f| %>
+  <h1>Add a New Dose</h1>
+    <%= simple_form_for [cocktail, dose] do |f| %>
+    <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
     <%= f.input :description %>
-    <%= f.submit "Add Dose", class: "btn btn-warning" %>
-    <% end %>
-  </div>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
 </div>
+
+
+
