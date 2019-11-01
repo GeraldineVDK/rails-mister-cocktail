@@ -5,14 +5,16 @@
 </div>
 
 
-<div class="container">
+<div class="container d-flex flex-row justify-content-center align-items-center flex-wrap">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-product">
-    <img src="https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2019.2F01.2F28.2Fe187c58e-768f-4eb3-b611-9f13a2ce073c.2Ejpeg/748x372/quality/80/crop-from/center/bloody-mary.jpeg" />
-      <div class="card-product-infos">
-        <h2><%= cocktail.name %></h2>
-      </div>
+    <div class="card-product d-flex justify-content-center align-items-center ", style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))" >
+      <img class= "background-image" src="https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2019.2F01.2F28.2Fe187c58e-768f-4eb3-b611-9f13a2ce073c.2Ejpeg/748x372/quality/80/crop-from/center/bloody-mary.jpeg" />
+      <h2 class= "text"><%= cocktail.name %></h2>
     </div>
   <% end %>
     <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-warning btn-lg" %>
 </div>
+
+
+
+
